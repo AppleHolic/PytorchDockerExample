@@ -4,8 +4,11 @@
 - Pytorch 기반의 딥러닝 학습 코드를 Docker 환경에서 실행하기 위한 간단한 예제를 준비해보았습니다.
 - MNIST example code : [https://github.com/pytorch/examples/blob/master/mnist](https://github.com/pytorch/examples/blob/master/mnist) 
 
+<br>
 
 ### Docker 파일 및 빌드, 실행에 대한 설명
+
+<br>
 
 #### Dockerfile
 - Dockerfile은 docker 실행 환경이 설치된 ([install link](https://docs.docker.com/install/)) 컴퓨터에 실행 환경이 갖춰진 상태로 코드를 실행 할 수 있는 이미지를 빌드하는 Command들을 순차적으로 나열한 코드 파일입니다. 
@@ -32,6 +35,8 @@ WORKDIR /root/example
 RUN pip install pip -U && pip install -r requirements.txt
 ```
 
+<br>
+
 #### 빌드 및 실행
 
 1. 빌드 : 이미지를 만들기 위한 기본적인 명령어 예시. 실행 시 Dockerfile에 적힌 지시어들에 따라 순차적으로 빌드가 됩니다. pytorch image pulling에 다소 시간이 소요됩니다.
@@ -49,13 +54,18 @@ $$ docker build . -t appleholic/pytorchmnistexample:v0.0
 $$ docker run -it appleholic/pytorchmnistexample:v0.0 python main.py
 ```
 
+<br>
 
 ### Docker HUB에 이미지 공유하기
 - Docker hub는 사람들이 빌드한 이미지를 공유하는 platform입니다. 빌드가 된 이미지는 주로 docker hub을 통해 공유되며, 이에 대해 간략하게 소개하고자 합니다.
 
+<br>
+
 #### 계정 및 repository 만들기 
 - [https://hub.docker.com/](https://hub.docker.com/) 에 자신의 아이디를 만듭니다.
 - 계정에 로그인 후 [https://hub.docker.com/add/repository/](https://hub.docker.com/add/repository/) 를 통해 repository를 만듭니다.
+
+<br>
 
 #### 이미지 푸쉬를 위한 단계
 
@@ -78,6 +88,8 @@ $$ docker push appleholic/pytorchmnistexample:v0.0
 $$ docker rmi appleholic/pytorchmnistexample:v0.0 -f
 $$ docker run -it appleholic/pytorchmnistexample:v0.0 python main.py
 ```
+
+<br>
 
 ### 기타
 
