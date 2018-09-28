@@ -43,12 +43,14 @@ RUN pip install pip -U && pip install -r requirements.txt
 - appleholic은 아래의 docker hub username 입니다.
 - appleholic/pytorchmnistexample : repository 이름
 - v0.0 : 해당 repository 에서 이미지에 대한 버전 관리를 위한 태그 입니다
+- \-t : tag argument
 
 ```bash
 $$ docker build . -t appleholic/pytorchmnistexample:v0.0
 ```
 
 2. 실행 : 빌드가 완료된 후 다음의 명령어로 실행이 가능합니다.
+- \-it : \-i 와 \-t 옵션이 결합된 형태이며, shell과 iteractive 하게 작업(stdin/out)을 하기 위해 같이 사용됩니다. (\-i STDIN 관련, \-t tty 할당) 
 
 ```bash
 $$ docker run -it appleholic/pytorchmnistexample:v0.0 python main.py
