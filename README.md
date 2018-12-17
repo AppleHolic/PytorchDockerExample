@@ -15,9 +15,9 @@
 
 - Line by line 설명
 
-1. FROM : FROM은 기존에 빌드된 다른 이미지로부터 빌드를 시작하기 원할 때 사용합니다. 이번 예시에서는 pytorch 0.4.1 버전을 기반으로 빌드하였습니다.
+1. FROM : FROM은 기존에 빌드된 다른 이미지로부터 빌드를 시작하기 원할 때 사용합니다. 이번 예시에서는 pytorch 1.0 버전을 기반으로 빌드하였습니다. 최신 버전의 태그는 [pytorch dockerhub](https://hub.docker.com/r/pytorch/pytorch/tags) 에서 확인하실 수 있습니다.
 ```
-FROM pytorch/pytorch:0.4.1-cuda9-cudnn7-runtime
+FROM pytorch/pytorch:1.0-cuda10.0-cudnn7-runtime 
 ```
 
 2. COPY : Code repository를 기준으로 가상의 Docker 이미지 상에 파일들을 복사하기 위한 지시어입니다. 이 예제에서는 main.py 및 requirements.txt를 복사하기 위해 사용하였습니다.
