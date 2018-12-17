@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:0.4.1-cuda9-cudnn7-runtime
+FROM pytorch/pytorch:1.0-cuda10.0-cudnn7-runtime 
 
 COPY . /root/example
 
