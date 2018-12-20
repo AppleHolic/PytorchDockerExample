@@ -42,18 +42,18 @@ RUN pip install pip -U && pip install -r requirements.txt
 1. 빌드 : 이미지를 만들기 위한 기본적인 명령어 예시. 실행 시 Dockerfile에 적힌 지시어들에 따라 순차적으로 빌드가 됩니다. pytorch image pulling에 다소 시간이 소요됩니다.
 - appleholic은 아래의 docker hub username 입니다.
 - appleholic/pytorchmnistexample : repository 이름
-- v0.0 : 해당 repository 에서 이미지에 대한 버전 관리를 위한 태그 입니다
+- v0.1 : 해당 repository 에서 이미지에 대한 버전 관리를 위한 태그 입니다
 - \-t : tag argument
 
 ```bash
-$$ docker build . -t appleholic/pytorchmnistexample:v0.0
+$$ docker build . -t appleholic/pytorchmnistexample:v0.1
 ```
 
 2. 실행 : 빌드가 완료된 후 다음의 명령어로 실행이 가능합니다.
 - \-it : \-i 와 \-t 옵션이 결합된 형태이며, shell과 iteractive 하게 작업(stdin/out)을 하기 위해 같이 사용됩니다. (\-i STDIN 관련, \-t tty 할당) 
 
 ```bash
-$$ docker run -it appleholic/pytorchmnistexample:v0.0 python main.py
+$$ docker run -it appleholic/pytorchmnistexample:v0.1 python main.py
 ```
 
 <br>
@@ -78,7 +78,7 @@ $$ docker login
 
 2. docker push : local에서 만든 이미지의 이름과 remote repository의 이름이 같다면, 해당 remote repository로 아래와 같이 푸쉬할 수 있습니다.
 ```bash
-$$ docker push appleholic/pytorchmnistexample:v0.0
+$$ docker push appleholic/pytorchmnistexample:v0.1
 ```
 
 - 푸쉬가 완료되고 나면, 자신이 만들었던 repository에 push가 되었다는 기록과 위와 같이 태그를 추가하였으면, 태그 탭에서 확인이 가능합니다.
@@ -87,8 +87,8 @@ $$ docker push appleholic/pytorchmnistexample:v0.0
 - remote image로 테스트를 원할 시 아래와 같이 로컬 이미지를 지운 후 명령어를 재실행 해 보세요.
 
 ```bash
-$$ docker rmi appleholic/pytorchmnistexample:v0.0 -f
-$$ docker run -it appleholic/pytorchmnistexample:v0.0 python main.py
+$$ docker rmi appleholic/pytorchmnistexample:v0.1 -f
+$$ docker run -it appleholic/pytorchmnistexample:v0.1 python main.py
 ```
 
 <br>
