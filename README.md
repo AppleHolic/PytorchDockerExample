@@ -1,5 +1,7 @@
 ## Basic Pytorch Docker Image Example
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAppleHolic%2FPytorchDockerExample)](https://hits.seeyoufarm.com)
+
 ### 소개
 - Pytorch 기반의 딥러닝 학습 코드를 Docker 환경에서 실행하기 위한 간단한 예제를 준비해보았습니다.
 - MNIST example code : [https://github.com/pytorch/examples/blob/master/mnist](https://github.com/pytorch/examples/blob/master/mnist) 
